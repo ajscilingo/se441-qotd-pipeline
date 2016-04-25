@@ -8,6 +8,8 @@ node {
 	
 	//access gradle from jenkins config
 	def gradleHome = tool 'Gradle 2.12'
-	sh "${gradleHome}/bin/gradle asssemble"
+	sh "${gradleHome}/bin/gradle assemble uploadArchives"
 	
+	step([$class: 'ArtifactArchiver', artifacts: '**/*.war'
+	finterprint: true])
  }
