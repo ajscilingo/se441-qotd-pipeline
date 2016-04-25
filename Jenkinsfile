@@ -8,6 +8,6 @@ node {
 	
 	//access gradle from jenkins config
 	def gradleHome = tool 'Gradle 2.12'
-	bat "${gradleHome}/bin/gradle asssemble"
+	sh "${gradleHome}/bin/gradle asssemble"
 	
  }
