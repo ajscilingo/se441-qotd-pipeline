@@ -10,6 +10,6 @@ node {
 	def gradleHome = tool 'Gradle 2.12'
 	sh "${gradleHome}/bin/gradle assemble uploadArchives"
 	
-	step([$class: 'ArtifactArchiver', artifacts: '**/*.war'
+	step([$class: 'ArtifactArchiver', artifacts: '**/*.war',
 	fingerprint: true])
  }
