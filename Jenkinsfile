@@ -11,5 +11,5 @@ node {
 	sh "${gradleHome}/bin/gradle assemble uploadArchives"
 	
 	step([$class: 'ArtifactArchiver', artifacts: '**/*.war'
-	finterprint: true])
+	fingerprint: true])
  }
