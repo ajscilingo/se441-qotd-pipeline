@@ -4,7 +4,7 @@ node {
 	// all pipeline code runs on a node
 	
 	// clone a Git Repo
-	git 'https://github.com/ajscilingo/se441-qotd-pipeline.git'
+	git 'https://github.com/ajscilingo/se441-qotd.git'
 	
 	//access gradle from jenkins config
 	def gradleHome = tool 'Gradle 2.12'
